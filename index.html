@@ -99,18 +99,39 @@
 		margin-top: 7px;
 	}
 	.nourl {
-		color:white;
+		color: white;
 		text-decoration: none;
 		font-family: "OSL";
 		font-size: 20px;
+	}
+	.getin {
+		width: 250px;
+		height: 50px;
+		background-color: #2c2c2c;
+		background-image: linear-gradient(to right, rgba(255,255,255,0.0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(0,0,0,0), rgba(0,0,0,0));
+		animation: lol 1s infinite linear;
+	}
+	@keyframes lol {
+		0% {
+			background-position-x: 0px;
+		}
+		100% {
+			background-position-x: 250px;
+		}
 	}
 </style>
 	<script>
 		function showmail() {
 			document.getElementById("email").innerHTML = "ratmester2010@tfwno.gf";
 		}
+		function japan() {
+			for ( ;; ) {
+				alert("CAUTION! YOU HAVE BEEN PENALIZED");
+			}
+		}
 	</script>
 	<head>
+		<div class="getin"></div>
 		<meta charset="UTF-8">
 		<title>sneakysnakeX299's safespace</title>
 	</head>
@@ -126,8 +147,9 @@
 	<ul style="margin-left: 25px">
 		<li><a href="https://github.com/sneakysnakeX299">Github (of course)</a></li>
 		<li><a href="https://youtube.com/MCKing45Gamer">YouTube (aka junkyard)</a></li>
-		<li><a href="mailto:ratmester2010@tfwno.gf">Spam me here! </a><a class="nourl" onclick="showmail()">Don't want to use your mail client? Click here!</a></li>
+		<li><a href="mailto:ratmester2010@tfwno.gf">Spam me here! </a><a class="nourl" onclick="showmail()" style="cursor: pointer">Don't want to use your mail client? Click here!</a></li>
 		<p style="text-align: center; margin-top: 5px" id="email"></p>
+		<li onclick="japan()" style="font-family: 'OSL'; font-size: 20px; margin-top: -7px; margin-left: 1px; cursor: pointer">Get me arrested in Japan!</li>
 	</ul>
 
 	</body>
