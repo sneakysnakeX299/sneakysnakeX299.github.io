@@ -105,8 +105,14 @@
 		font-size: 20px;
 	}
 	.getin {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		font-family: Helvetica;
+		font-size: 30px;
+		padding: 5px;
 		width: 250px;
-		height: 50px;
+		height: 38px;
 		background-color: #2c2c2c;
 		background-image: linear-gradient(to right, rgba(255,255,255,0.0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(0,0,0,0), rgba(0,0,0,0));
 		animation: lol 1s infinite linear;
@@ -129,9 +135,32 @@
 				alert("CAUTION! YOU HAVE BEEN PENALIZED");
 			}
 		}
+		function showall() {
+			var h1s = document.getElementsByTagName("H1");
+			var lis = document.getElementsByTagName("LI");
+			var str = document.getElementsByTagName("STRONG");
+			var lists = document.getElementsByTagName("UL");
+			var premium = document.getElementsByTagName("P");
+			for (var i = 0; i < str.length; i++) {
+				str[i].hidden = false;
+			}
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].hidden = false;
+			}
+			for (var i = 0; i < h1s.length; i++) {
+				h1s[i].hidden = false;
+			}
+			for (var i = 0; i < lists.length; i++) {
+				lists[i].hidden = false;
+			}
+			for (var i = 0; i < premium.length; i++) {
+				premium[i].hidden = false;
+			}
+
+		}
 	</script>
 	<head>
-		<div class="getin"></div>
+		<div class="getin" onclick="showall()">enter</div>
 		<meta charset="UTF-8">
 		<title>sneakysnakeX299's safespace</title>
 	</head>
@@ -151,5 +180,26 @@
 		<p style="text-align: center; margin-top: 5px" id="email"></p>
 		<li onclick="japan()" style="font-family: 'OSL'; font-size: 20px; margin-top: -7px; margin-left: 1px; cursor: pointer">Get me arrested in Japan!</li>
 	</ul>
-
+	<script>
+		var h1s = document.getElementsByTagName("H1");
+		var lis = document.getElementsByTagName("LI");
+		var str = document.getElementsByTagName("STRONG");
+		var lists = document.getElementsByTagName("UL");
+		var premium = document.getElementsByTagName("P");
+		for (var i = 0; i < str.length; i++) {
+			str[i].hidden = true;
+		}
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].hidden = true;
+		}
+		for (var i = 0; i < h1s.length; i++) {
+			h1s[i].hidden = true;
+		}
+		for (var i = 0; i < lists.length; i++) {
+			lists[i].hidden = true;
+		}
+		for (var i = 0; i < premium.length; i++) {
+			premium[i].hidden = true;
+		}
+	</script>
 	</body>
