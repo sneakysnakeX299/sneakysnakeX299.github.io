@@ -125,6 +125,9 @@
 			background-position-x: 250px;
 		}
 	}
+	.core {
+		visibility: hidden;
+	}
 </style>
 	<script>
 		function showmail() {
@@ -136,41 +139,27 @@
 			}
 		}
 		function showall() {
-			var h1s = document.getElementsByTagName("H1");
-			var lis = document.getElementsByTagName("LI");
-			var str = document.getElementsByTagName("STRONG");
-			var lists = document.getElementsByTagName("UL");
-			var premium = document.getElementsByTagName("P");
-			for (var i = 0; i < str.length; i++) {
-				str[i].hidden = false;
-			}
-			for (var i = 0; i < lis.length; i++) {
-				lis[i].hidden = false;
-			}
-			for (var i = 0; i < h1s.length; i++) {
-				h1s[i].hidden = false;
-			}
-			for (var i = 0; i < lists.length; i++) {
-				lists[i].hidden = false;
-			}
-			for (var i = 0; i < premium.length; i++) {
-				premium[i].hidden = false;
-			}
-
+			document.getElementById("core").style.visibility = "visible";
+			document.getElementById("entry").style.visibility = "hidden";
+			document.getElementById("entry").style.margin = "0vh";
+			var hd = new Audio("hd.wav");
+			hd.play();
 		}
 	</script>
 	<head>
-		<div class="getin" onclick="showall()">enter</div>
+		<div class="getin" onclick="showall()" style="cursor: default; margin-top: 45vh" id="entry">enter</div>
 		<meta charset="UTF-8">
 		<title>sneakysnakeX299's safespace</title>
 	</head>
 	<body>
+	<div class="core" id="core">
 	<h1 style="margin-bottom: 50px">sneakysnakeX299's safespace</h1>
 	<strong style="font-size: 26px; color: lightgreen">Links:</strong>
 	<ul style="margin-left: 25px">
-		<li><a href="https://github.com/sneakysnakeX299">Github (this is where you probably came from)</a></li>
+		<li><a href="https://github.com/sneakysnakeX299">GitHub (this is where you probably came from)</a></li>
 		<li><a href="https://github.com/sneakysnakeX299/screentorch">screentorch shortcut</a></li>
-		<li style="padding: 0 0 25px 0"><a href="https://github.com/sneakysnakeX299/redsn0w">Shortcut to my redsn0w archive</a></li>
+		<li><a href="https://github.com/sneakysnakeX299/redsn0w">Shortcut to my redsn0w archive</a></li>
+		<li style="padding: 0 0 25px 0"><a href="https://github.com/sneakysnakeX299/70gigmalware">Shortcut to my malware archive</a></li>
 	</ul>
 	<strong style="font-size: 26px; color: lightgreen">Contact:</strong>
 	<ul style="margin-left: 25px">
@@ -180,26 +169,5 @@
 		<p style="text-align: center; margin-top: 5px" id="email"></p>
 		<li onclick="japan()" style="font-family: 'OSL'; font-size: 20px; margin-top: -7px; margin-left: 1px; cursor: pointer">Get me arrested in Japan!</li>
 	</ul>
-	<script>
-		var h1s = document.getElementsByTagName("H1");
-		var lis = document.getElementsByTagName("LI");
-		var str = document.getElementsByTagName("STRONG");
-		var lists = document.getElementsByTagName("UL");
-		var premium = document.getElementsByTagName("P");
-		for (var i = 0; i < str.length; i++) {
-			str[i].hidden = true;
-		}
-		for (var i = 0; i < lis.length; i++) {
-			lis[i].hidden = true;
-		}
-		for (var i = 0; i < h1s.length; i++) {
-			h1s[i].hidden = true;
-		}
-		for (var i = 0; i < lists.length; i++) {
-			lists[i].hidden = true;
-		}
-		for (var i = 0; i < premium.length; i++) {
-			premium[i].hidden = true;
-		}
-	</script>
+	</div>
 	</body>
