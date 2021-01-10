@@ -3,7 +3,8 @@
 <style>
 	h1 {
 		text-align: center;
-		animation: safespace 2s infinite;
+		color: white;
+		transition: color 2.5s;
 	}
 	body {
 		max-width: 800px;
@@ -30,71 +31,6 @@
 		font-family: "OSL";
 		font-size: 20px;
 	}
-	@keyframes safespace {
-		0% {
-			color: red;
-		}
-		5% {
-			color: darkgreen;
-		}
-		10% {
-			color: pink;
-		}
-		15% {
-			color: darkblue;
-		}
-		20% {
-			color: orange;
-		}
-		25% {
-			color: darkred;
-		}
-		30% {
-			color: lightblue;
-		}
-		35% {
-			color: darkorange;
-		}
-		40% {
-			color: lightgreen;
-		}
-		45% {
-			color: darkmagenta;
-		}
-		50% {
-			color: yellow;
-		}
-		55% {
-			color: grey;
-		}
-		60% {
-			color: green;
-		}
-		65% {
-			color: white;
-		}
-		70% {
-			color: brown;
-		}
-		75% {
-			color: purple;
-		}
-		80% {
-			color: aqua;
-		}
-		85% {
-			color: turquoise;
-		}
-		90% {
-			color: magenta;
-		}
-		95% {
-			color: blue;
-		}
-		100% {
-			color: red;
-		}
-	}
 	li {
 		margin-top: 7px;
 	}
@@ -114,7 +50,7 @@
 		width: 250px;
 		height: 38px;
 		background-color: #2c2c2c;
-		background-image: linear-gradient(to right, rgba(255,255,255,0.0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(0,0,0,0), rgba(0,0,0,0));
+		background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(0,0,0,0), rgba(0,0,0,0));
 		animation: lol 1s infinite linear;
 	}
 	@keyframes lol {
@@ -146,20 +82,35 @@
 			hd.play();
 			hd.loop = true;
 		}
+		
+		function sleep(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		async function colours() {
+			for ( ;; ) {
+				let R = Math.floor(Math.random() * 255);
+				let G = Math.floor(Math.random() * 255);
+				let B = Math.floor(Math.random() * 255);
+				document.getElementById("tt").style.color = "rgba(" + R + "," + G + "," + B + ", 1)"; //this looks awful but it's either long or complicated...
+				await sleep(2000);
+			}
+		}
 	</script>
 	<head>
-		<div class="getin" onclick="showall()" style="cursor: default; margin-top: 45vh" id="entry">enter</div>
+		<div class="getin" onclick="showall(); colours();" style="cursor: default; margin-top: 45vh" id="entry">enter</div>
 		<meta charset="UTF-8">
 		<title>sneakysnakeX299's safespace</title>
 	</head>
 	<body>
 	<div class="core" id="core">
-	<h1 style="margin-bottom: 50px">sneakysnakeX299's safespace</h1>
+	<h1 style="margin-bottom: 50px" id="tt">sneakysnakeX299's safespace</h1>
 	<strong style="font-size: 26px; color: lightgreen">Links:</strong>
 	<ul style="margin-left: 25px">
 		<li><a href="https://github.com/sneakysnakeX299">GitHub (this is where you probably came from)</a></li>
 		<li><a href="https://github.com/sneakysnakeX299/screentorch">screentorch shortcut</a></li>
 		<li><a href="https://github.com/sneakysnakeX299/redsn0w">Shortcut to my redsn0w archive</a></li>
+		<li><a href="https://github.com/sneakysnakeX299/reminiscent">reminiscent shortcut</a></li>
 	</ul>
 	<strong style="font-size: 26px; color: lightgreen">Contact:</strong>
 	<ul style="margin-left: 25px">
